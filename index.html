@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Lab 5 · Portfolio thực hành</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -58,14 +59,14 @@
         <section id="lien-he">
             <h2>Liên hệ</h2>
             <p>Form mô phỏng, chưa gửi email hoặc lưu vào cơ sở dữ liệu. Chỉ nhập dữ liệu giả.</p>
-            <form action="ket-qua.html" method="get">
+            <form id="contact-form">
                 <div class="form-field">
                     <label for="fullname">Họ tên (bắt buộc)</label><!-- 4.1 -->
                     <input id="fullname" name="fullname" type="text" autocomplete="name" required
-                        minlength="0"><!-- 4.4 -->
+                        minlength="2" maxlength="80"><!-- 4.4 -->
                 </div>
                 <div class="form-field"><label for="email">Email (bắt buộc)</label>
-                    <input id="email" name="email" type="texr" required autocomplete="email"
+                    <input id="email" name="email" type="email" required autocomplete="email"
                         aria-describedby="email-help"><!-- 4.2; 4.3 -->
                     <p class="help" id="email-help">Ví dụ: an@example.com</p>
                 </div>
@@ -74,7 +75,8 @@
                         aria-describedby="message-help"></textarea><!-- 4.5; 4.6; 4.7 -->
                     <p class="help" id="message-help">Nhập từ 10 đến 500 ký tự.</p>
                 </div>
-                <button class="button" type="button">Kiểm tra biểu mẫu</button><!-- 4.8 -->
+                <button class="button" type="submit">Kiểm tra biểu mẫu</button><!-- 4.8 -->
+                <p class="help" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
